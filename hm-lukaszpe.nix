@@ -55,17 +55,26 @@
         }];
       };
     };
-    dconf.settings = {
-      "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-      font.name = "Meslo LGS NF 12";
-      theme = {
-        name = "Flat-Remix-GTK-Red-Darkest";
+    gtk = {
+      enable="true";
+      gtk3.extraConfig = {
+      Settings = ''gtk-application-prefer-dark-theme=1'';
       };
-      iconTheme = {
-        name = "Flat-Remix-Red-Dark";
-      };
-      };
+    gtk4.extraConfig = {
+      Settings = ''gtk-application-prefer-dark-theme=1';
+    };
+    iconTheme = {
+      name = "Flat-Remix-Red-Dark";
+      # package = pkgs.papirus-icon-theme;
+    };
+    theme = {
+      name = "Flat-Remix-GTK-Red-Darkest";
+      # package = pkgs.palenight-theme;
+    };
+    # cursorTheme = {
+    #   name = "Numix-Cursor";
+    #   package = pkgs.numix-cursor-theme;
+    # };
     };
   };
 }
