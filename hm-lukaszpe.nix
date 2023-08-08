@@ -18,17 +18,34 @@
       initExtra=''
       clne;
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-      #Klawisze
-        bindkey  '^[[H'   beginning-of-line
-        bindkey  '^[[F'   end-of-line
-        bindkey  '^[[3~'  delete-char
-        bindkey  '^[[2~'  overwrite-mode
-        bindkey  ';5D'  backward-word
-        bindkey  ';5C'  forward-word
-        bindkey  '^H'  backward-delete-word
-        bindkey  '5~'  kill-word
-        bindkey  '^[[5~'  up-line-or-history
-        bindkey  '^[[6~'  down-line-or-history
+      setopt interactive_comments bashautolist nobeep nomenucomplete noautolist
+        ## Keybindings section
+        bindkey -e
+        bindkey '^[[7~' beginning-of-line                   # Home key
+        bindkey '^[[H' beginning-of-line                    # Home key
+        # [Home] - Go to beginning of line
+        if [[ "''${terminfo[khome]}" != "" ]]; then
+        bindkey "''${terminfo[khome]}" beginning-of-line
+        fi
+        bindkey '^[[8~' end-of-line                         # End key
+        bindkey '^[[F' end-of-line                          # End key
+        # [End] - Go to end of line
+        if [[ "''${terminfo[kend]}" != "" ]]; then
+        bindkey "''${terminfo[kend]}" end-of-line
+        fi
+        bindkey '^[[2~' overwrite-mode                      # Insert key
+        bindkey '^[[3~' delete-char                         # Delete key
+        bindkey '^[[C'  forward-char                        # Right key
+        bindkey '^[[D'  backward-char                       # Left key
+        bindkey '^[[5~' history-beginning-search-backward   # Page up key
+        bindkey '^[[6~' history-beginning-search-forward    # Page down key
+        # Navigate words with ctrl+arrow keys
+        bindkey '^[Oc' forward-word
+        bindkey '^[Od' backward-word
+        bindkey '^[[1;5D' backward-word
+        bindkey '^[[1;5C' forward-word
+        # delete previous word with ctrl+backspace
+        bindkey '^H' backward-kill-word
       '';
       zplug={
         enable = true;
@@ -37,10 +54,6 @@
           tags = [ "as:theme" "depth:1" ];
         }];
       };
-    };
-    dconf.settings = {
-      "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
     };
   };
 }
