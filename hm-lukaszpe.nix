@@ -17,17 +17,18 @@
      wy="git add . && git commit -a --allow-empty-message -m '' && git push";
     };
     initExtra=''
+    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     #Klawisze
-      bindkey  "^[[H"   beginning-of-line
-      bindkey  "^[[F"   end-of-line
-      bindkey  "^[[3~"  delete-char
-      bindkey  "^[[2~"  overwrite-mode
-      bindkey  ";5D"  backward-word
-      bindkey  ";5C"  forward-word
-      bindkey  "^H"  backward-delete-word
-      bindkey  "5~"  kill-word
-      bindkey  "^[[5~"  up-line-or-history
-      bindkey  "^[[6~"  down-line-or-history
+      bindkey  '^[[H'   beginning-of-line
+      bindkey  '^[[F'   end-of-line
+      bindkey  '^[[3~'  delete-char
+      bindkey  '^[[2~'  overwrite-mode
+      bindkey  ';5D'  backward-word
+      bindkey  ';5C'  forward-word
+      bindkey  '^H'  backward-delete-word
+      bindkey  '5~'  kill-word
+      bindkey  '^[[5~'  up-line-or-history
+      bindkey  '^[[6~'  down-line-or-history
     '';
     zplug={
       enable = true;
