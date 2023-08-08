@@ -3,14 +3,16 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-
+let
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+in
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # ./shares.nix
       ./sway.nix
-      <home-manager/nixos>
+      (import "${home-manager}/nixos")
     ];
 
   # Bootloader.
@@ -371,6 +373,7 @@ fonts.fonts = with pkgs; [
   };
   # Home - manager
   home-manager.users.lukaszpe = { pkgs, ... }: {
+  home.stateVersion = "23.05";
   home.packages = [  ];
   };
 
