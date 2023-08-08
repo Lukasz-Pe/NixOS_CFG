@@ -4,7 +4,7 @@
 
 { config, pkgs, ... }:
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz";
 in
 {
   imports =
@@ -13,6 +13,7 @@ in
       # ./shares.nix
       ./sway.nix
       (import "${home-manager}/nixos")
+      ./hm-lukaszpe.nix
     ];
 
   # Bootloader.
@@ -371,10 +372,4 @@ fonts.fonts = with pkgs; [
       };
     };
   };
-  # Home - manager
-  home-manager.users.lukaszpe = { pkgs, ... }: {
-  home.stateVersion = "23.05";
-  home.packages = [  ];
-  };
-
 }
