@@ -58,6 +58,13 @@
     dconf.settings = {
       "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
+      font.name = "Meslo LGS NF 12";
+      theme = {
+        name = "Flat-Remix-GTK-Red-Darkest";
+      };
+      iconTheme = {
+        name = "Flat-Remix-Red-Dark";
+      };
       };
     };
   };
