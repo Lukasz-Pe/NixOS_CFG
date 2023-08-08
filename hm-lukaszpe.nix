@@ -76,5 +76,6 @@
     #   package = pkgs.numix-cursor-theme;
     # };
     };
+    home.sessionVariables.GTK_THEME = "Flat-Remix-GTK-Red-Darkest";
   };
 }
