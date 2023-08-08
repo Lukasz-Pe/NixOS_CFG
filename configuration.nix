@@ -61,7 +61,7 @@
   #     Enable = "Source,Sink,Media,Socket";
   #     };
   #   };
-  };
+  # };
   # pulseaudio = {
   #   enable = true;
   #   package = pkgs.pulseaudioFull;
