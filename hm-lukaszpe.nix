@@ -4,8 +4,7 @@
     home-manager.users.lukaszpe = { pkgs, ... }: {
     home.stateVersion = "23.05";
     home.packages = [  ];
-    };
-  programs.zsh = {
+    programs.zsh = {
     enable = true;
     shellAliases = {
       update = "sudo nixos-rebuild switch";
@@ -38,4 +37,5 @@
       }];
     };
   };
+    };
 }
