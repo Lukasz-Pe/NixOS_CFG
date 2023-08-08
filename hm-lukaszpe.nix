@@ -24,15 +24,15 @@
         bindkey '^[[7~' beginning-of-line                   # Home key
         bindkey '^[[H' beginning-of-line                    # Home key
         # [Home] - Go to beginning of line
-        if [[ "''${terminfo[khome]}" != "" ]]; then
-          bindkey "''${terminfo[khome]}" beginning-of-line
-        fi
+        # if [[ "''${terminfo[khome]}" != "" ]]; then
+        #   bindkey "''${terminfo[khome]}" beginning-of-line
+        # fi
         bindkey '^[[8~' end-of-line                         # End key
         bindkey '^[[F' end-of-line                          # End key
         # [End] - Go to end of line
-        if [[ "''${terminfo[kend]}" != "" ]]; then
-        bindkey "''${terminfo[kend]}" end-of-line
-        fi
+        # if [[ "''${terminfo[kend]}" != "" ]]; then
+        # bindkey "''${terminfo[kend]}" end-of-line
+        # fi
         bindkey '^[[2~' overwrite-mode                      # Insert key
         bindkey '^[[3~' delete-char                         # Delete key
         bindkey '^[[C'  forward-char                        # Right key
