@@ -1,7 +1,7 @@
 # Home - manager
 {pkgs,...}:
 {
-    home-manager.users.lukaszpe = { pkgs, ... }: {
+  home-manager.users.lukaszpe = { pkgs, ... }: {
     home.stateVersion = "23.05";
     home.packages = [  ];
     programs.zsh = {
@@ -16,16 +16,16 @@
       wy="git add . && git commit -a --allow-empty-message -m '' && git push";
       };
       initExtra=''
-      clne;
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-      setopt interactive_comments bashautolist nobeep nomenucomplete noautolist
+        clne;
+        [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+        setopt interactive_comments bashautolist nobeep nomenucomplete noautolist
         ## Keybindings section
         bindkey -e
         bindkey '^[[7~' beginning-of-line                   # Home key
         bindkey '^[[H' beginning-of-line                    # Home key
         # [Home] - Go to beginning of line
         if [[ "''${terminfo[khome]}" != "" ]]; then
-        bindkey "''${terminfo[khome]}" beginning-of-line
+          bindkey "''${terminfo[khome]}" beginning-of-line
         fi
         bindkey '^[[8~' end-of-line                         # End key
         bindkey '^[[F' end-of-line                          # End key
@@ -53,6 +53,7 @@
           name = "romkatv/powerlevel10k";
           tags = [ "as:theme" "depth:1" ];
         }];
+      };
     };
   };
 }
