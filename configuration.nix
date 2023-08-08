@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       # ./shares.nix
       ./sway.nix
+      <home-manager/nixos>
     ];
 
   # Bootloader.
