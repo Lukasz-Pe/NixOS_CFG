@@ -53,7 +53,7 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
-  #Bluetooth
+  # #Bluetooth
   # bluetooth={
   #   enable = true;
   #   settings = {
@@ -127,6 +127,7 @@
   environment={
     shellAliases={
       clne="clear && neofetch";
+      swaygo="sway --unsupported-gpu";
       #gcrs="sudo scp lukaszpe@EGM:/home/lukaszpe/Dokumenty/NIX/\\*.nix /etc/nixos/ && sudo nixos-rebuild switch";
     };
     systemPackages = with pkgs; [
