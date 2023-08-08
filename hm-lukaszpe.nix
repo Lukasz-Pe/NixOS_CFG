@@ -53,6 +53,10 @@
           name = "romkatv/powerlevel10k";
           tags = [ "as:theme" "depth:1" ];
         }];
+        dconf.settings = {
+          "org/gnome/desktop/interface" = {
+          color-scheme = "prefer-dark";
+        };
       };
     };
   };
