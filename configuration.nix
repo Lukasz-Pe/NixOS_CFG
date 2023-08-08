@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./shares.nix
+      # ./shares.nix
       ./sway.nix
     ];
 
@@ -33,34 +33,34 @@
       enable = true;
       driSupport = true;
       driSupport32Bit = true;
-      extraPackages = with pkgs; [
-        rocm-opencl-icd
-        rocm-opencl-runtime
-        amdvlk
-      ];
+      # extraPackages = with pkgs; [
+      #   rocm-opencl-icd
+      #   rocm-opencl-runtime
+      #   amdvlk
+      # ];
     };
     #AMD GPU KERNEL DRIVERS
-    initrd.kernelModules = [ "amdgpu" ];
+    # initrd.kernelModules = [ "amdgpu" ];
     #NVIDIA KERNEL DRIVERS
-  # nvidia = {
-  #   # Modesetting is needed for most Wayland compositors
-  #   modesetting.enable = true;
-  #   # Use the open source version of the kernel module
-  #   # Only available on driver 515.43.04+
-  #   open = false;
-  #   # Enable the nvidia settings menu
-  #   nvidiaSettings = true;
-  #   # Optionally, you may need to select the appropriate driver version for your specific GPU.
-  #   package = config.boot.kernelPackages.nvidiaPackages.stable;
-  # };
+  nvidia = {
+    # Modesetting is needed for most Wayland compositors
+    modesetting.enable = true;
+    # Use the open source version of the kernel module
+    # Only available on driver 515.43.04+
+    open = false;
+    # Enable the nvidia settings menu
+    nvidiaSettings = true;
+    # Optionally, you may need to select the appropriate driver version for your specific GPU.
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
   #Bluetooth
-  bluetooth={
-    enable = true;
-    settings = {
-      General = {
-      Enable = "Source,Sink,Media,Socket";
-      };
-    };
+  # bluetooth={
+  #   enable = true;
+  #   settings = {
+  #     General = {
+  #     Enable = "Source,Sink,Media,Socket";
+  #     };
+  #   };
   };
   # pulseaudio = {
   #   enable = true;
@@ -270,8 +270,8 @@ fonts.fonts = with pkgs; [
       xkbModel = "pc105";
       xkbVariant = ",us";
       xkbOptions = "grp:menu_toggle";
-      # videoDrivers = ["nvidia"];
-      videoDrivers = [ "amdgpu" ];
+      videoDrivers = ["nvidia"];
+      # videoDrivers = [ "amdgpu" ];
     };
     # Enable automatic login for the user.
     getty.autologinUser = "lukaszpe";
