@@ -368,4 +368,9 @@ fonts.fonts = with pkgs; [
       };
     };
   };
+  # Home - manager
+  home-manager.users.lukaszpe = { pkgs, ... }: {
+  home.packages = [  ];
+  };
+
 }
