@@ -127,7 +127,7 @@
   environment={
     shellAliases={
       clne="clear && neofetch";
-      gcrs="sudo scp lukaszpe@EGM:/home/lukaszpe/Dokumenty/NIX/\\*.nix /etc/nixos/ && sudo nixos-rebuild switch";
+      #gcrs="sudo scp lukaszpe@EGM:/home/lukaszpe/Dokumenty/NIX/\\*.nix /etc/nixos/ && sudo nixos-rebuild switch";
     };
     systemPackages = with pkgs; [
       #System tools
