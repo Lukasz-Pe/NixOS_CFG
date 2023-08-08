@@ -1,6 +1,6 @@
 # Home - manager
 {pkgs,...}:
-  {
+{
     home-manager.users.lukaszpe = { pkgs, ... }: {
     home.stateVersion = "23.05";
     home.packages = [  ];
@@ -53,11 +53,6 @@
           name = "romkatv/powerlevel10k";
           tags = [ "as:theme" "depth:1" ];
         }];
-        dconf.settings = {
-          "org/gnome/desktop/interface" = {
-          color-scheme = "prefer-dark";
-        };
-      };
     };
   };
 }
