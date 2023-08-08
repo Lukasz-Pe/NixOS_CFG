@@ -132,7 +132,7 @@ in
     shellAliases={
       clne="clear && neofetch";
       swaygo="sway --unsupported-gpu";
-      gcrs ="cd /home/lukaszpe/Programowanie/NixOS_CFG && git pull && ./copy.sh && sudo nixos-rebuild switch";
+      akt ="cd /home/lukaszpe/Programowanie/NixOS_CFG && git pull && ./copy.sh && sudo nixos-rebuild switch";
       #gcrs="sudo scp lukaszpe@EGM:/home/lukaszpe/Dokumenty/NIX/\\*.nix /etc/nixos/ && sudo nixos-rebuild switch";
     };
     systemPackages = with pkgs; [
