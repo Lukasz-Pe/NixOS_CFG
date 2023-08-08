@@ -151,6 +151,7 @@ in
         git
         udisks
         cifs-utils
+        python3Full
       #SWAY APPS
         alacritty
         waybar
