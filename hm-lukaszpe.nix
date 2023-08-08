@@ -9,7 +9,7 @@
   enable = true;
   shellAliases = {
     update = "sudo nixos-rebuild switch";
-    susu='sudo -i --preserve-env=HOME'
+    susu="sudo -i --preserve-env=HOME"
     gn="cd /home/lukaszpe/Dokumenty/Obsidian/notatki"
     gg="gn && git pull"
     pull="git pull"
